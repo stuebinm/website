@@ -1,0 +1,10 @@
+\documentclass {stuebinm-basic}
+
+
+\newcommand {\addlist}
+{\add {postlist}{#1}}
+
+
+\newcommand {\makelist} {
+	\include {\get {postlist}}
+}

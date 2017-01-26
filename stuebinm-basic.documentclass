@@ -1,0 +1,179 @@
+
+\newcommand {\emph} {\tag{em}{#1}}
+\newcommand {\title} {\set {title} {#1}}
+\newcommand {\webtitle} {\set {webtitle} {#1}}
+\newcommand {\headerquote} {\set {headerquote} {#1}}
+\newcommand {\enquote} {&ldquo;#1&rdquo;}
+
+\newcommand {\add} {\set {#1} {\get{#1}\raw #2 \endraw}}
+
+\headerquote {\enquote{Beware of bugs in the above code; I have only proved it correct, not tried it.} &mdash; D.E.Knuth}
+
+\newcommand {\href}{
+\tag {a class="link" href="#1"} {#2}
+}
+
+\newcommand {\maketitle} {
+	\tag{div class="box-top"}{
+		\tag {a class="title" href="\get{$target}"} {\get{title}}
+	}
+	\openingtag {div class="box-main"}
+	\openingtag {div class="text"}
+}
+
+
+\newenv {document} {
+	\openingtag {html}
+	\tag {head} {
+		\tag {style} {\get {styles}}
+		\tag {title} {\get {webtitle}}
+	}
+	\openingtag {body}
+	\tag {div class="background"}
+	\tag {div class="box-header"} {
+		\tag {a class="header-title" href="/stuebinm/index.html"} {\get {webtitle}}
+		\tag {div class="header-quote"} {\get {headerquote}}
+	}
+	\openingtag {div class="content"}
+} 
+{
+	\closingtag {div}
+	\closingtag {body}
+	\closingtag {html}
+}
+{
+	\set {paragraph} {
+		\closingtag {p}
+		\openingtag {p}
+	}
+}
+
+\newcommand {\includeimage} {
+	\closingtag {p}
+	\openingtag {img class="frame" src="#1" width="100%"}
+	\openingtag {p}
+}
+
+\add {styles} {\raw
+@font-face {
+        font-family: "CM Bold";
+        src: url("/stuebinm/fonts/cmunbmr.ttf");
+      font-weight: normal; 
+      font-style: normal;
+    }
+    @font-face {
+        font-family: "CM Serif";
+        src: url("/stuebinm/fonts/cmunrm.ttf");
+      font-weight: normal; 
+      font-style: normal;
+    }
+    @font-face {
+        font-family: "CM Typewriter";
+        src: url("/stuebinm/fonts/cmunorm.ttf");
+      font-weight: italic; 
+      font-style: normal;
+    }
+    .initial {
+      float: left;
+      padding: 0.27em 5px 0 0;
+      font-size: 340%;
+      font-weight: bold;
+      line-height: 0.5;
+    }
+    .box-top {
+      position: relative;
+      width: 100%;
+      background-color: #ddd;
+      border: 1px solid #444;
+      text-align: center;
+    }
+    .box-main {
+      position: relative;
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid #444;
+      border-top-style: none;
+      text-align: justify;
+    }
+    .text {
+      font-family: "CM Serif";
+      line-height: 1.5;
+      font-size: 12pt;
+      color: #111;
+      padding: 2vw; 
+    }
+    .box-header {
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      margin-top: 0px;
+      margin: auto;
+      width: 100%;     
+      z-index: 999;
+      font-family: "CM Typewriter";
+      line-height: 1.5;
+      color: #111;
+      
+      padding-top: 13px;
+      font-weight: normal; 
+      font-style: normal; 
+      background-color: white;
+      border-bottom: 1px solid #444;
+      border-top-style: none;
+      text-align: center;
+    }
+    .header-title {
+      font-size: 20pt;
+      font-family: "CM Typewriter";
+      line-height: 1.5;
+      color: #111;
+      text-decoration: none;
+      
+    }
+    .header-quote {
+      font-size: 15pt;
+      color: #333;
+      margin-left: 2vw;
+      margin-right: 2vw;
+    }
+    .title {
+        font-size: 8vh;
+        color: #111; 
+        font-family: "CM Bold";
+        font-weight: normal;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    	text-decoration: none;
+    }
+    .content {
+        margin-top: 30vh;
+        margin-bottom: 20vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250mm;
+        max-width: 98%;
+        background-color: black;
+    }
+    .background {
+        z-index: -10;
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        height: 100%;
+        background-image: url("/stuebinm/background.png");
+    }
+    .link {
+    	color: blue;
+    	text-decoration: none;
+    }
+    .frame {
+    	max-width:100%;
+    	border: 1px solid #444;
+    }
+\endraw}
+
+
+

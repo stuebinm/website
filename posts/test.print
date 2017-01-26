@@ -1,0 +1,15 @@
+\documentclass {post}
+
+
+\title {~stuebinm}
+\webtitle {/~stuebinm}
+
+\summary {Just a test.}
+
+\begin {document}
+
+\maketitle
+
+\blindtext
+
+\end {document}
