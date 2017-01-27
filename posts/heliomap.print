@@ -1,0 +1,89 @@
+\documentclass {post}
+
+\weblink {www.in.tum.de/~stuebinm/posts/heliomap}
+
+\title {\fontface{Eadui}{Ye Olde Tyme Heliophysics Map}}
+\webtitle {/~stuebinm}
+
+
+\date {2017-01-27T18:10:09+01:00}
+
+
+
+\summary {So someone at NASA made this cool old-fashioned map:
+
+\includeimage {http://svs.gsfc.nasa.gov/vis/a000000/a004500/a004526/OldeTimeHelioMapv4_print.jpg}
+
+\href {http://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=4526} {NASA's Scientific Visualization Studio}
+
+Which looks nice and fine and everything, until you spot the case error: \enquote{Helio Incognita} is just \emph{wrong}. However, we live in an age of nice-and-shiny image manipulation programs, so here's a corrected version. At least I hope it's corrected, because I have no idea which gender \enquote{Helio} actually is, so there might still be something wrong with it. But at least it's not as glaringly obvious even to someone who knows almost no Latin at all (such as me). So here's my work:
+}
+
+
+
+
+
+
+
+
+\begin {document}
+
+\maketitle
+
+So someone at NASA made this cool old-fashioned map:
+
+\includeimage {http://svs.gsfc.nasa.gov/vis/a000000/a004500/a004526/OldeTimeHelioMapv4_print.jpg}
+
+NASA's Scientific Visualization Studio
+
+Which looks nice and fine and everything, until you spot the case error: \enquote{Helio Incognita} is just \emph{wrong}. However, we live in an age of nice-and-shiny image manipulation programs, so here's a corrected version. At least I hope it's corrected, because I have no idea which gender \enquote{Helio} actually is, so there might still be something wrong with it. But at least it's not as glaringly obvious even to someone who knows almost no Latin at all (such as me). So here's my work:
+
+\includeimage {images/heliomap_small.png}
+
+All hail gimp! (Sorry. No, actually, not sorry. Nevermind ...)
+
+\hr
+
+Ok, so after further discussion about this (\href {http://scienceblogs.de/astrodicticum-simplex/2017/01/17/wenn-columbus-ein-heliophysiker-gewesen-waere/#comment-1132828} {here}), there's now a version completely in latin as well (thanks to Alderamin and the crazy people who maintain the \href {https://la.wikipedia.org/wiki/Vicipaedia:Pagina_prima} {latin wikipedia}):
+
+\includeimage {images/heliomap_latin_small.png}
+
+I didn't find exactly the right font, but I think this one fits quite well, too.
+
+\hr
+
+And another update: I've noticed that some browsers have trouble with the seriously large amount of pixels on this site, so I've scaled these images down a bit. They're still larger than Full HD, but any smaller and the text stops being readable (just look at the celestial sphere ...).
+
+I've also corrected the colours of the text, which in the original wasn't actually black but more of a weird dark-brownish ink-like sort of tone. Oh, also, fixed the typo. And Alderamin requested a version which kept the original \enquote{Unknown Sun} thing in the title:
+
+\includeimage {images/heliomap_latin_2_small.png}
+
+Tomtoo requested a version with \enquote{the invisible breath of the sun} as title; I hope the latin's half-way correct:
+
+\includeimage {images/heliomap_latin_3_small.png}
+
+The larger versions of these images still exist, of course:
+
+\href {images/heliomap.png} {Here's the original image, with corrected case agreement but non-existing Latin words}
+
+\href {images/heliomap_latin.png} {The Latin version}
+
+\href {images/heliomap_latin_2.png} {The \enquote{Unknown Sun} version}
+
+\href {images/heliomap_latin_3.png} {The \enquote{Breath of The Sun} version}
+
+Additionally, \href {images/heliomap.xcf} {here's} the gimp source file I used for all of this. It includes a version of this image without any text at all, in case you want to do something else with it (just be sure to give credit to NASA, as requested on their site with the original image \href {http://svs.gsfc.nasa.gov/cgi-bin/details.cgi?aid=4526} {here}). You will probably need to install the font I used. Either download it from \href {https://fontlibrary.org/en/font/eadui} {here} (by the way, this is a great site for free-as-in-freedom fonts), or just take it directly from \href {/stuebinm/fonts/Eaduin.ttf} {this server} (Why does it make me happy that a major university is now hosting a quasi-medieval font on its servers?).
+
+Lastly, there's a vector graphic version of the first image, which can be used to feed a laser (thanks to the awesome guys at \href {https://munichmakerlab.de/} {Munich Maker Lab}!):
+
+\includeimage {images/heliomap.svg}
+
+\includeimage {images/heliomap_laser.png}
+
+(Sorry about the blurry image, but it's the best my cheap smartphone camera could manage ...)
+
+All these files can also be found in a handy git repository on github.
+
+
+
+\end {document}

@@ -1,0 +1,19 @@
+\documentclass {post}
+
+
+\title {heliomap}
+\webtitle {/~stuebinm}
+
+
+
+
+\begin {document}
+
+\maketitle
+
+I've reorganized this site a bit, and this one just didn't fit in anymore.
+
+For now, it can be found \href {posts/heliomap} {here} instead.
+
+
+\end {document}

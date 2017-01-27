@@ -5,22 +5,36 @@
 \newcommand {\headerquote} {\set {headerquote} {#1}}
 \newcommand {\enquote} {&ldquo;#1&rdquo;}
 
+\newcommand {\weblink}{\set {$uri} {#1}}
+\newcommand {\date}{\set {$date} {#1}}
+
 \newcommand {\add} {\set {#1} {\get{#1}\raw #2 \endraw}}
 
-\headerquote {\enquote{Beware of bugs in the above code; I have only proved it correct, not tried it.} &mdash; D.E.Knuth}
+\headerquote {\enquote{Beware of bugs in the above code; I have only proved it correct, not tried it.} &mdash; D. E. Knuth}
 
 \newcommand {\href}{
 \tag {a class="link" href="#1"} {#2}
 }
 
-\newcommand {\maketitle} {
+\newcommand {\printtitle} {
 	\tag{div class="box-top"}{
 		\tag {a class="title" href="\get{$target}"} {\get{title}}
 	}
+}
+
+\newcommand {\maketitle} {
+	\printtitle
 	\openingtag {div class="box-main"}
 	\openingtag {div class="text"}
 }
 
+\newcommand {\fontface} {
+	\tag {span style="font-family: #1;"} {#2}
+}
+
+\newcommand {\center} {
+	\tag {p style="text-align: center;"} {#1}
+}
 
 \newenv {document} {
 	\openingtag {html}
@@ -48,6 +62,15 @@
 	}
 }
 
+\newcommand {\hr} {
+	\closingtag {p}
+	\closingtag {div}
+	\closingtag {div}
+	\openingtag {div class="box-main"}
+	\openingtag {div class="text"}
+	\openingtag {p}
+}
+
 \newcommand {\includeimage} {
 	\closingtag {p}
 	\openingtag {img class="frame" src="#1" width="100%"}
@@ -71,6 +94,12 @@
         font-family: "CM Typewriter";
         src: url("/stuebinm/fonts/cmunorm.ttf");
       font-weight: italic; 
+      font-style: normal;
+    }
+    @font-face {
+        font-family: "Eadui";
+        src: url("/stuebinm/fonts/Eadui.ttf");
+      font-weight: normal; 
       font-style: normal;
     }
     .initial {
@@ -154,7 +183,6 @@
         margin-right: auto;
         width: 250mm;
         max-width: 98%;
-        background-color: black;
     }
     .background {
         z-index: -10;

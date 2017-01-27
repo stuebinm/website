@@ -4,10 +4,11 @@
 \title {~stuebinm}
 \webtitle {/~stuebinm}
 
-\addlist {test.print}
 
 \begin {document}
 
-\includelinked {posts/test.print}
+\addpost {posts/heliomap.print}
+
+\addpost {posts/test.print}
 
 \end {document}

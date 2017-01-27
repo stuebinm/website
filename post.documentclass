@@ -3,7 +3,23 @@
 
 
 \newcommand {\summary} {
-\writefile {description.aux} {\maketitle #1}
+	\writefile {description.aux} {\printtitle
+
+		\tag {div class="box-main"} {
+			\tag {div class="text"} {#1 
+				\closingtag {p}
+				\center{\href {\get {$target}} {(read more)}}
+			}
+		}
+	}
+	\set {$summary} {
+		\tag {div class="box-main"} {
+			\tag {div class="text"} {#1 
+				\closingtag {p}
+				\center{\href {\get {$target}} {(read more)}}
+			}
+		}
+	}
 }
 
 \newcommand {\blindtext} {Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
